@@ -1,0 +1,6 @@
+server:
+  port: 9404
+  
+spring:
+  application:
+    name: spring-security-jdbc

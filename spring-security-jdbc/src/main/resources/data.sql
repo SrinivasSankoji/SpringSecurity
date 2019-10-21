@@ -1,0 +1,7 @@
+Insert Into Users(USERNAME,PASSWORD,ENABLED) VALUES ('user','pass',true);
+
+Insert Into Users(USERNAME,PASSWORD,ENABLED) VALUES ('admin','pass',true);
+
+Insert Into AUTHORITIES(USERNAME,AUTHORITY) VALUES ('user','ROLE_USER');
+
+Insert Into AUTHORITIES(USERNAME,AUTHORITY) VALUES ('admin','ROLE_ADMIN');
