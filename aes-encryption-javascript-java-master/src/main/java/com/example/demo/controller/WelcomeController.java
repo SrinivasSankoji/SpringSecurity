@@ -22,6 +22,8 @@ import java.util.UUID;
 public class WelcomeController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(WelcomeController.class);
+	
+	private String decryptedPassword="";
 
 	@RequestMapping(value={"/login"},method = RequestMethod.GET)
     public String loginPage(HttpServletRequest request){
@@ -37,6 +39,7 @@ public class WelcomeController {
     public @ResponseBody ResponseEntity  login(@RequestBody Credentials credentials) {
     	String decryptedPassword =  new String(java.util.Base64.getDecoder().decode(credentials.getPassword()));
         AesUtil aesUtil = new AesUtil(128, 1000);
+        System.out.println("Decrypted Password :" +decryptedPassword);
         Map map = new HashMap<>();
         if (decryptedPassword != null && decryptedPassword.split("::").length == 3) {
             LOGGER.info("Password decrypted successfully for username - " + credentials.getUserName());

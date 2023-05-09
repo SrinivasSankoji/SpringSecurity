@@ -27,16 +27,31 @@
                     <form id="login-form" role="form" style="display: block;">
                         <div class="form-group">
                             <label for="username">User Name</label>
-                            <input type="text" name="userName" id="username" tabindex="1" class="form-control" placeholder="Username" ng-model="userName" autocomplete="off"/>
+                            <input type="text" name="userName" tabindex="1" class="form-control" ng-model="userName" autocomplete="off"/>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" ng-model="password" autocomplete="off"/>
+                            <input type="password" name="password" tabindex="2" class="form-control" ng-model="password" autocomplete="off"/>
                         </div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-sm-6 col-sm-offset-3">
-                                    <input type="button" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" ng-click="logMeIn()"/>
+                                    <input type="button" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" ng-click="encrypt()"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Decrypted User Name</label>
+                            <input type="text" name="decryptedUserName" tabindex="1" class="form-control" ng-model="decryptedUserName" autocomplete="off"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Decrypted Password</label>
+                            <input type="password" name="decryptedPassword" tabindex="2" class="form-control" ng-model="decryptedPassword" autocomplete="off"/>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <input type="button" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" ng-click="decrypt()"/>
                                 </div>
                             </div>
                         </div>
