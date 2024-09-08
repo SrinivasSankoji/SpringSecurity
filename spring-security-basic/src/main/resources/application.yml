@@ -1,8 +1,0 @@
-server:
-  port: 9601
-  
-spring:
-  security:
-    user:
-      name: bhaumik
-      password: bhaumik
